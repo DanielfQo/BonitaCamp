@@ -4,7 +4,7 @@
   "type" : "page",
   "uuid" : "d7b962b1-d383-4a2b-ba54-31a8498ab60a",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1749342856099,
+  "lastUpdate" : 1749474691065,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -49,34 +49,7 @@
     ],
     [
       {
-        "type" : "fragment",
-        "dimension" : {
-          "xs" : 12,
-          "sm" : 12,
-          "md" : 12,
-          "lg" : 12
-        },
-        "propertyValues" : {
-          "cssClasses" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "hidden" : {
-            "type" : "constant",
-            "value" : false
-          }
-        },
-        "reference" : "066735d4-6969-4c50-9a8a-e5ce9db155ad",
-        "hasValidationError" : false,
-        "id" : "nuevaSolicitudVacacionesFragmento",
-        "binding" : {
-          "dataExt" : "nuevaSolicitudVacaciones"
-        }
-      }
-    ],
-    [
-      {
-        "type" : "component",
+        "type" : "container",
         "dimension" : {
           "xs" : 12,
           "sm" : 12,
@@ -92,81 +65,137 @@
             "type" : "constant",
             "value" : false
           },
-          "disabled" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "allowHTML" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "label" : {
-            "type" : "interpolation",
-            "value" : "Crear una nueva solicitud"
-          },
-          "alignment" : {
-            "type" : "constant",
-            "value" : "center"
-          },
-          "buttonStyle" : {
-            "type" : "constant",
-            "value" : "primary"
-          },
-          "action" : {
-            "type" : "constant",
-            "value" : "POST"
-          },
-          "assign" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "url" : {
-            "type" : "interpolation",
-            "value" : "../API/bpm/process/{{informacionDefinicionProceso[0].id}}/instantiation"
-          },
-          "responseStatusCode" : {
-            "type" : "variable"
-          },
-          "dataToSend" : {
-            "type" : "expression",
-            "value" : "nuevaSolicitudVacaciones"
-          },
-          "dataFromSuccess" : {
-            "type" : "variable",
-            "value" : ""
-          },
-          "closeOnSuccess" : {
-            "type" : "constant",
-            "value" : false
-          },
-          "dataFromError" : {
-            "type" : "variable"
-          },
-          "targetUrlOnSuccess" : {
-            "type" : "interpolation",
-            "value" : "/bonita/apps/solicitud-vacaciones"
-          },
-          "collectionToModify" : {
-            "type" : "variable"
-          },
-          "modalId" : {
-            "type" : "constant",
-            "value" : ""
-          },
-          "collectionPosition" : {
-            "type" : "constant",
-            "value" : "Last"
-          },
-          "valueToAdd" : {
-            "type" : "constant"
-          },
-          "removeItem" : {
+          "repeatedCollection" : {
             "type" : "variable"
           }
         },
-        "reference" : "a3b2999b-2fa5-4d43-aef7-51f905042778",
+        "reference" : "9dd98557-992a-424c-bee7-8d38fdd13674",
         "hasValidationError" : false,
-        "id" : "pbButton"
+        "id" : "pbContainer",
+        "rows" : [
+          [
+            {
+              "type" : "fragment",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                }
+              },
+              "reference" : "066735d4-6969-4c50-9a8a-e5ce9db155ad",
+              "hasValidationError" : false,
+              "id" : "nuevaSolicitudVacacionesFragmento",
+              "binding" : {
+                "dataExt" : "nuevaSolicitudVacaciones"
+              }
+            }
+          ],
+          [
+            {
+              "type" : "component",
+              "dimension" : {
+                "xs" : 12,
+                "sm" : 12,
+                "md" : 12,
+                "lg" : 12
+              },
+              "propertyValues" : {
+                "cssClasses" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "hidden" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "disabled" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "label" : {
+                  "type" : "interpolation",
+                  "value" : "Crear una nueva solicitud"
+                },
+                "alignment" : {
+                  "type" : "constant",
+                  "value" : "center"
+                },
+                "buttonStyle" : {
+                  "type" : "constant",
+                  "value" : "primary"
+                },
+                "action" : {
+                  "type" : "constant",
+                  "value" : "POST"
+                },
+                "assign" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "url" : {
+                  "type" : "interpolation",
+                  "value" : "../API/bpm/process/{{informacionDefinicionProceso[0].id}}/instantiation"
+                },
+                "responseStatusCode" : {
+                  "type" : "variable"
+                },
+                "dataToSend" : {
+                  "type" : "expression",
+                  "value" : "nuevaSolicitudVacaciones"
+                },
+                "dataFromSuccess" : {
+                  "type" : "variable",
+                  "value" : ""
+                },
+                "closeOnSuccess" : {
+                  "type" : "constant",
+                  "value" : false
+                },
+                "dataFromError" : {
+                  "type" : "variable"
+                },
+                "targetUrlOnSuccess" : {
+                  "type" : "interpolation",
+                  "value" : "/bonita/apps/solicitud-vacaciones"
+                },
+                "collectionToModify" : {
+                  "type" : "variable"
+                },
+                "modalId" : {
+                  "type" : "constant",
+                  "value" : ""
+                },
+                "collectionPosition" : {
+                  "type" : "constant",
+                  "value" : "Last"
+                },
+                "valueToAdd" : {
+                  "type" : "constant"
+                },
+                "removeItem" : {
+                  "type" : "variable"
+                }
+              },
+              "reference" : "a3b2999b-2fa5-4d43-aef7-51f905042778",
+              "hasValidationError" : false,
+              "id" : "pbButton"
+            }
+          ]
+        ]
       }
     ],
     [
@@ -403,7 +432,7 @@
                     "rows" : [
                       [
                         {
-                          "type" : "fragment",
+                          "type" : "component",
                           "dimension" : {
                             "xs" : 12,
                             "sm" : 12,
@@ -418,14 +447,145 @@
                             "hidden" : {
                               "type" : "constant",
                               "value" : false
+                            },
+                            "readOnly" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "required" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "allowHTML" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "labelHidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "label" : {
+                              "type" : "interpolation",
+                              "value" : "Fecha de inicio"
+                            },
+                            "labelPosition" : {
+                              "type" : "constant",
+                              "value" : "top"
+                            },
+                            "labelWidth" : {
+                              "type" : "constant",
+                              "value" : 4
+                            },
+                            "value" : {
+                              "type" : "variable",
+                              "value" : "solicitudVacaciones_selected.fechaInicio"
+                            },
+                            "dateFormat" : {
+                              "type" : "constant",
+                              "value" : "MM/dd/yyyy"
+                            },
+                            "placeholder" : {
+                              "type" : "interpolation",
+                              "value" : "Enter a date (mm/dd/yyyy)"
+                            },
+                            "showToday" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "todayLabel" : {
+                              "type" : "interpolation",
+                              "value" : "Today"
                             }
                           },
-                          "reference" : "5c5ec1a5-2a54-406a-85d6-5fb4d675cd9a",
+                          "reference" : "0b039e82-d6fd-4e11-ab19-b0b48af5359c",
                           "hasValidationError" : false,
-                          "id" : "nuevaSolicitudVacacionesFragmento",
-                          "binding" : {
-                            "dataExt" : "solicitudVacaciones_selected"
-                          }
+                          "id" : "pbDatePicker"
+                        }
+                      ],
+                      [
+                        {
+                          "type" : "component",
+                          "dimension" : {
+                            "xs" : 12,
+                            "sm" : 12,
+                            "md" : 12,
+                            "lg" : 12
+                          },
+                          "propertyValues" : {
+                            "cssClasses" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "hidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "required" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "allowHTML" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "minLength" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "maxLength" : {
+                              "type" : "constant",
+                              "value" : ""
+                            },
+                            "readOnly" : {
+                              "type" : "constant",
+                              "value" : true
+                            },
+                            "labelHidden" : {
+                              "type" : "constant",
+                              "value" : false
+                            },
+                            "label" : {
+                              "type" : "interpolation",
+                              "value" : "Numero de dias"
+                            },
+                            "labelPosition" : {
+                              "type" : "constant",
+                              "value" : "top"
+                            },
+                            "labelWidth" : {
+                              "type" : "constant",
+                              "value" : 4
+                            },
+                            "placeholder" : {
+                              "type" : "interpolation",
+                              "value" : "Número de días de vacaciones"
+                            },
+                            "value" : {
+                              "type" : "variable",
+                              "value" : "solicitudVacaciones_selected.numeroDias"
+                            },
+                            "debounce" : {
+                              "type" : "constant",
+                              "value" : 0
+                            },
+                            "type" : {
+                              "type" : "constant",
+                              "value" : "text"
+                            },
+                            "min" : {
+                              "type" : "constant"
+                            },
+                            "max" : {
+                              "type" : "constant"
+                            },
+                            "step" : {
+                              "type" : "constant",
+                              "value" : 1
+                            }
+                          },
+                          "reference" : "eee20336-fb86-4761-b95f-b2cebcf568e6",
+                          "hasValidationError" : false,
+                          "id" : "pbInput"
                         }
                       ],
                       [
@@ -536,6 +696,13 @@
       "type" : "url",
       "value" : [
         "../API/bpm/process?p=0&c=10&f=name=SolicitudVacaciones&o=version%20desc"
+      ],
+      "exposed" : false
+    },
+    "nuevaSolicitudVacaciones" : {
+      "type" : "json",
+      "value" : [
+        "{}"
       ],
       "exposed" : false
     }
