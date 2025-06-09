@@ -4,7 +4,7 @@
   "type" : "page",
   "uuid" : "d7b962b1-d383-4a2b-ba54-31a8498ab60a",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1749474691065,
+  "lastUpdate" : 1749475374042,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -334,10 +334,9 @@
                       "columnsKey" : {
                         "type" : "constant",
                         "value" : [
-                          "solicitanteId",
                           "fechaInicio",
                           "numeroDias",
-                          "estaAprobado"
+                          "esAprobadaEtiqueta"
                         ]
                       },
                       "dimension" : {
@@ -679,11 +678,11 @@
         "if($data.hasOwnProperty('solicitudVacaciones') && $data.solicitudVacaciones) {\r",
         "  for (let solicitud of $data.solicitudVacaciones) {\r",
         "    if(solicitud.esAprobada)  {\r",
-        "      demande.esAprobadaEtiqueta = \"Aprobada\";\r",
+        "      solicitud.esAprobadaEtiqueta = \"Aprobada\";\r",
         "    } else if(solicitud.esAprobada === false) {\r",
-        "      demande.esAprobadaEtiqueta = \"Rechazada\";\r",
+        "      solicitud.esAprobadaEtiqueta = \"Rechazada\";\r",
         "    } else {\r",
-        "      demande.esAprobadaEtiqueta = \"En curso\";\r",
+        "      solicitud.esAprobadaEtiqueta = \"En curso\";\r",
         "    }\r",
         "  }\r",
         "}\r",
